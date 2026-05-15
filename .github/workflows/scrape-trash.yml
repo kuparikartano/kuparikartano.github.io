@@ -10,15 +10,15 @@ on:
       service:
         description: "HSY service number"
         required: false
-        default: ""
+        default: "BB11-012731-0"
       postal:
         description: "Postal code"
         required: false
-        default: ""
+        default: "00410"
       customer:
         description: "Customer ID"
         required: false
-        default: ""
+        default: "72603608934"
 
 permissions:
   contents: write   # commit updated data file back to the repo
