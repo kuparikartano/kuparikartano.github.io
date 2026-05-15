@@ -4,7 +4,7 @@ on:
   schedule:
     # Midnight Helsinki time. GitHub cron is UTC and doesn't know DST, so
     # 22:00 UTC = 00:00 EET (winter) / 01:00 EEST (summer). Close enough.
-    - cron: "0 22 * * *"
+    - cron: "0 22 30 * *"
   workflow_dispatch:
     inputs:
       service:
