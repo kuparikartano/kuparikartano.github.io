@@ -16,6 +16,11 @@ permissions:
   pages: write
   id-token: write
 
+# Opt the JS-based actions (checkout, configure-pages, upload-pages-artifact,
+# deploy-pages, etc.) into Node.js 24 ahead of the June 2026 default switch.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   build:
     runs-on: ubuntu-latest
