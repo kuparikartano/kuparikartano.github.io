@@ -4,4 +4,4 @@ title:
 permalink: /
 ---
 
-![](/assets/images/julkisivu_juna.png)
+![](assets/images/julkisivu_juna.png)
