@@ -1,0 +1,81 @@
+{%- comment -%}
+  Auto-generated top nav.
+
+  Layout convention (everything except index.md lives under _content/):
+
+    index.md                       → home page at "/"
+    _content/<file>.md             → top-level link in the nav
+    _content/<folder>/<file>.md    → "<Folder>" dropdown,
+                                       <file>'s title becomes the dropdown item
+
+  Page front-matter:
+    title         (required — used as the menu / dropdown-item label)
+    nav_order     (optional integer — lower goes first; otherwise alphabetical by title)
+    nav_exclude   (set to true to hide a page from the nav)
+
+  Dropdown labels are taken from the folder name with the first letter
+  capitalized. Drop a new .md file into the tree and it appears in the nav
+  on the next build — no edits to this template needed.
+{%- endcomment -%}
+
+{%- assign nav_docs = site.content
+      | where_exp: "d", "d.title"
+      | where_exp: "d", "d.nav_exclude != true" -%}
+
+{%- comment -%} ============= Top-level files in _content/ ============= {%- endcomment -%}
+{%- assign top_docs = "" | split: "" -%}
+{%- for d in nav_docs -%}
+  {%- assign rel = d.relative_path | remove_first: "_content/" -%}
+  {%- unless rel contains "/" -%}
+    {%- assign top_docs = top_docs | push: d -%}
+  {%- endunless -%}
+{%- endfor -%}
+{%- assign top_ord  = top_docs | where_exp: "d", "d.nav_order"        | sort: "nav_order" -%}
+{%- assign top_rest = top_docs | where_exp: "d", "d.nav_order == nil" | sort: "title" -%}
+{%- assign top_sorted = top_ord | concat: top_rest -%}
+
+{%- comment -%} ============= Discover unique subfolders ============= {%- endcomment -%}
+{%- assign folders_raw = "" | split: "" -%}
+{%- for d in nav_docs -%}
+  {%- assign rel = d.relative_path | remove_first: "_content/" -%}
+  {%- if rel contains "/" -%}
+    {%- assign folder = rel | split: "/" | first -%}
+    {%- assign folders_raw = folders_raw | push: folder -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign folders = folders_raw | uniq | sort -%}
+
+<nav class="site-nav" aria-label="Päänavigaatio">
+  <ul class="menu">
+
+    {%- for d in top_sorted -%}
+      <li><a href="{{ d.url | relative_url }}">{{ d.title }}</a></li>
+    {%- endfor -%}
+
+    {%- for folder in folders -%}
+      {%- comment %} Collect the docs in this folder {%- endcomment -%}
+      {%- assign items = "" | split: "" -%}
+      {%- for d in nav_docs -%}
+        {%- assign rel = d.relative_path | remove_first: "_content/" -%}
+        {%- if rel contains "/" -%}
+          {%- assign d_folder = rel | split: "/" | first -%}
+          {%- if d_folder == folder -%}
+            {%- assign items = items | push: d -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- assign items_ord  = items | where_exp: "d", "d.nav_order"        | sort: "nav_order" -%}
+      {%- assign items_rest = items | where_exp: "d", "d.nav_order == nil" | sort: "title" -%}
+      {%- assign items_sorted = items_ord | concat: items_rest -%}
+
+      <li class="has-dropdown">
+        <span class="dropdown-trigger" tabindex="0">{{ folder | capitalize }} <span class="caret" aria-hidden="true">▾</span></span>
+        <ul class="dropdown" role="menu">
+          {%- for d in items_sorted -%}
+            <li role="none"><a role="menuitem" href="{{ d.url | relative_url }}">{{ d.title }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>

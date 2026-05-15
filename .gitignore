@@ -1,0 +1,18 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+Gemfile.lock
+
+# Python / scraper
+__pycache__/
+*.pyc
+.venv/
+.playwright/
+.scrape-debug/
+
+# OS
+.DS_Store
+Thumbs.db

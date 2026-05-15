@@ -1,0 +1,112 @@
+{
+  "updated_at": "2026-05-14T09:23:02+00:00",
+  "updated_at_human": "14.5.2026 klo 12:23",
+  "source_url": "https://raportit.hsy.fi/report/#/fi/serviceDescription/BB11-012731-0/00410/72603608934////",
+  "collection_address": "Parivaljakonkuja 4, 00410",
+  "containers": [
+    {
+      "waste_type": "Kartonkipakkaukset",
+      "container_size": "660 l",
+      "container_count": "1",
+      "container_type": "astia isopyöräinen",
+      "container_owner": "Vuokra",
+      "collection_interval": "1 krt/viikko to",
+      "next_collection_date": "2026-05-14",
+      "next_collection_date_human": "to 14.5.2026",
+      "next_collection_date_short": "14.05.26",
+      "days_until": 0,
+      "is_next": false
+    },
+    {
+      "waste_type": "Sekajäte",
+      "container_size": "300 l",
+      "container_count": "3",
+      "container_type": "astia",
+      "container_owner": "Vuokra",
+      "collection_interval": "2 krt/viikko ma to",
+      "next_collection_date": "2026-05-14",
+      "next_collection_date_human": "to 14.5.2026",
+      "next_collection_date_short": "14.05.26",
+      "days_until": 0,
+      "is_next": true
+    },
+    {
+      "waste_type": "Muovipakkaukset",
+      "container_size": "660 l",
+      "container_count": "1",
+      "container_type": "astia isopyöräinen",
+      "container_owner": "Vuokra",
+      "collection_interval": "1 krt/viikko pe",
+      "next_collection_date": "2026-05-15",
+      "next_collection_date_human": "pe 15.5.2026",
+      "next_collection_date_short": "15.05.26",
+      "days_until": 1,
+      "is_next": false
+    },
+    {
+      "waste_type": "Biojäte",
+      "container_size": "240 l vuoraussäkki",
+      "container_count": "1",
+      "container_type": "säkki",
+      "container_owner": "-",
+      "collection_interval": "1 krt/viikko ti",
+      "next_collection_date": "2026-05-19",
+      "next_collection_date_human": "ti 19.5.2026",
+      "next_collection_date_short": "19.05.26",
+      "days_until": 5,
+      "is_next": false
+    },
+    {
+      "waste_type": "Biojäte",
+      "container_size": "240 l",
+      "container_count": "1",
+      "container_type": "astia",
+      "container_owner": "Vuokra",
+      "collection_interval": "1 krt/viikko ti",
+      "next_collection_date": "2026-05-19",
+      "next_collection_date_human": "ti 19.5.2026",
+      "next_collection_date_short": "19.05.26",
+      "days_until": 5,
+      "is_next": false
+    },
+    {
+      "waste_type": "Pienmetalli",
+      "container_size": "240 l",
+      "container_count": "1",
+      "container_type": "astia",
+      "container_owner": "Vuokra",
+      "collection_interval": "joka 4. viikko ti",
+      "next_collection_date": "2026-06-09",
+      "next_collection_date_human": "ti 9.6.2026",
+      "next_collection_date_short": "09.06.26",
+      "days_until": 26,
+      "is_next": false
+    },
+    {
+      "waste_type": "Lasipakkaukset",
+      "container_size": "240 l",
+      "container_count": "1",
+      "container_type": "astia",
+      "container_owner": "Vuokra",
+      "collection_interval": "joka 8. vko",
+      "next_collection_date": "2026-07-07",
+      "next_collection_date_human": "ti 7.7.2026",
+      "next_collection_date_short": "07.07.26",
+      "days_until": 54,
+      "is_next": false
+    }
+  ],
+  "next": {
+    "waste_type": "Sekajäte",
+    "container_size": "300 l",
+    "container_count": "3",
+    "container_type": "astia",
+    "container_owner": "Vuokra",
+    "collection_interval": "2 krt/viikko ma to",
+    "next_collection_date": "2026-05-14",
+    "next_collection_date_human": "to 14.5.2026",
+    "next_collection_date_short": "14.05.26",
+    "days_until": 0,
+    "is_next": true
+  }
+}

@@ -1,0 +1,49 @@
+title: Kuparikartano
+lang: fi
+
+# Base URL. If you deploy to a project page like
+#   https://<user>.github.io/<repo>/
+# set baseurl to "/<repo>". Override in GitHub Actions if needed.
+url: ""
+baseurl: ""
+
+permalink: /:title/
+
+# HSY service identifiers used by the scraper. Override in the workflow if needed.
+hsy:
+  service_number: "BB11-012731-0"
+  postal_code: "00410"
+  customer_id: "72603608934"
+  source_url: "https://raportit.hsy.fi/report/#/fi/serviceDescription/BB11-012731-0/00410/72603608934////"
+
+# Everything except index.md lives in _content/. Subfolders inside _content/
+# automatically become dropdown menus in the top nav (see _includes/nav.html).
+# `permalink: /:path/` strips the "_content/" prefix from URLs.
+collections:
+  content:
+    output: true
+    permalink: /:path/
+
+# Jekyll build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-toc
+
+# Sidebar TOC (pages opt in with `toc: true` in front matter).
+toc:
+  min_level: 1
+  max_level: 2
+
+# Exclude infra files from the build output
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - vendor/
+  - .github/
+  - node_modules/
