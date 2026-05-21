@@ -1,5 +1,5 @@
 {%- comment -%}
-  Auto-generated top nav.
+  Auto-generated top nav (uses Bootstrap 5 navbar + dropdown components).
 
   Layout convention (everything except index.md lives under _content/):
 
@@ -16,6 +16,15 @@
   Dropdown labels are taken from the folder name with the first letter
   capitalized. Drop a new .md file into the tree and it appears in the nav
   on the next build — no edits to this template needed.
+
+  Markup uses Bootstrap's dropdown component (.dropdown / .dropdown-toggle
+  / .dropdown-menu / .dropdown-item with data-bs-toggle="dropdown") for
+  the folder menus. The outer layout (.site-nav .menu) is kept as plain
+  flex CSS — adding Bootstrap's .navbar / .navbar-expand wrapper made the
+  dropdown <li>s disappear in our header (likely a navbar flex-layout
+  interaction with the surrounding .wrap flex container), so we drop the
+  navbar shell and use Bootstrap only for the dropdown behaviour. Colors
+  and sizes are in assets/style.css so the visual look is unchanged.
 {%- endcomment -%}
 
 {%- assign nav_docs = site.content
@@ -49,7 +58,7 @@
   <ul class="menu">
 
     {%- for d in top_sorted -%}
-      <li><a href="{{ d.url | relative_url }}">{{ d.title }}</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ d.url | relative_url }}">{{ d.title }}</a></li>
     {%- endfor -%}
 
     {%- for folder in folders -%}
@@ -68,11 +77,11 @@
       {%- assign items_rest = items | where_exp: "d", "d.nav_order == nil" | sort: "title" -%}
       {%- assign items_sorted = items_ord | concat: items_rest -%}
 
-      <li class="has-dropdown">
-        <span class="dropdown-trigger" tabindex="0">{{ folder | capitalize }} <span class="caret" aria-hidden="true">▾</span></span>
-        <ul class="dropdown" role="menu">
+      <li class="nav-item dropdown has-dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">{{ folder | capitalize }}</a>
+        <ul class="dropdown-menu">
           {%- for d in items_sorted -%}
-            <li role="none"><a role="menuitem" href="{{ d.url | relative_url }}">{{ d.title }}</a></li>
+            <li><a class="dropdown-item" href="{{ d.url | relative_url }}">{{ d.title }}</a></li>
           {%- endfor -%}
         </ul>
       </li>

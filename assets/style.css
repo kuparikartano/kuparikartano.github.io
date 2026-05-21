@@ -67,7 +67,11 @@ a:hover { text-decoration: underline; }
   text-decoration: none;
   color: #8C2F23;
 }
-/* Top-level menu */
+/* Top-level menu.
+   The markup uses Bootstrap's .navbar / .navbar-nav / .nav-item /
+   .nav-link / .dropdown / .dropdown-toggle / .dropdown-menu /
+   .dropdown-item, but every visual property here is the same as the old
+   hand-rolled menu — colors, sizes, paddings, caret are unchanged. */
 .site-nav .menu {
   display: flex;
   gap: 18px;
@@ -75,44 +79,59 @@ a:hover { text-decoration: underline; }
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
+  flex-direction: row;
   text-transform: uppercase;
 }
 .site-nav .menu > li { position: relative; }
+
+/* Anchors (top-level links AND dropdown triggers, which are <a>s now). */
 .site-nav a,
-.site-nav .dropdown-trigger {
+.site-nav .nav-link {
   text-decoration: none;
   color: var(--muted);
   font-size: 0.95rem;
   cursor: pointer;
   display: inline-block;
+  padding: 0;            /* strip Bootstrap's .nav-link padding */
+  background: transparent;
 }
 .site-nav a:hover,
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus,
 .site-nav .menu > li:focus-within > a,
-.site-nav .menu > li:focus-within > .dropdown-trigger {
+.site-nav .menu > li:focus-within > .nav-link,
+.site-nav .nav-item.show > .nav-link {
   color: var(--accent);
 }
-.site-nav .caret {
+
+/* Replace Bootstrap's default triangle with the old ▾ caret. */
+.site-nav .dropdown-toggle::after {
+  content: "▾";
+  border: 0;
+  vertical-align: baseline;
   font-size: 0.7em;
-  margin-left: 2px;
+  margin-left: 4px;
   opacity: 0.7;
+  width: auto;
+  height: auto;
 }
 
-/* Dropdown — auto-generated from any subfolder.
-   The previous bug was a 6px gap between the trigger and the dropdown:
-   moving the mouse across that gap dropped :hover on the parent <li> and
-   closed the menu before you could click anything. The fix:
-     1. Extend the parent <li>'s OWN box downward (padding-bottom) so the
-        hover area covers the visual gap. This is the reliable fix —
-        pseudo-elements aren't guaranteed to participate in hover testing
-        across all browsers.
-     2. Pull the dropdown back up the same amount with margin-top, so the
-        visual position is unchanged.
-   Result: the trigger and the dropdown share an 8px overlap zone that's
-   always inside :hover. The menu stays open the whole way down. */
+/* Dropdown panel — auto-generated from any subfolder.
+
+   The dropdown opens TWO ways:
+     • on hover (CSS :hover, matching the pre-Bootstrap behaviour), and
+     • on click  (Bootstrap JS toggling the .show class via data-bs-toggle).
+   The two don't fight: both end up setting display:block on the same
+   .dropdown-menu. Explicit top/left positioning means the panel lands in
+   the same spot regardless of which path opened it (no Popper needed).
+
+   The old 8px-padding-bottom + -8px-margin-top trick is preserved so
+   moving the mouse from the trigger into the panel never crosses an
+   un-hovered gap. */
 .site-nav .has-dropdown {
   padding-bottom: 8px;
 }
-.site-nav .dropdown {
+.site-nav .dropdown-menu {
   list-style: none;
   margin: -8px 0 0;
   padding: 10px 0;
@@ -120,26 +139,30 @@ a:hover { text-decoration: underline; }
   top: 100%;
   left: -10px;
   min-width: 200px;
-  background: var(--card);
+  background-color: var(--card);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
   z-index: 100;
-  display: none;
+  font-size: 0.92rem;
+  text-transform: none;  /* dropdown items are sentence-case, not uppercase */
 }
-.site-nav .has-dropdown:hover > .dropdown,
-.site-nav .has-dropdown:focus-within > .dropdown {
+.site-nav .has-dropdown:hover > .dropdown-menu,
+.site-nav .has-dropdown:focus-within > .dropdown-menu {
   display: block;
 }
-.site-nav .dropdown li { margin: 0; }
-.site-nav .dropdown a {
+.site-nav .dropdown-menu li { margin: 0; }
+.site-nav .dropdown-item {
   display: block;
   padding: 7px 14px;
   color: var(--fg);
   font-size: 0.92rem;
+  background-color: transparent;
+  text-decoration: none;
 }
-.site-nav .dropdown a:hover {
-  background: var(--accent-soft);
+.site-nav .dropdown-item:hover,
+.site-nav .dropdown-item:focus {
+  background-color: var(--accent-soft);
   color: var(--accent);
 }
 
