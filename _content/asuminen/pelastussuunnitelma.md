@@ -262,23 +262,23 @@ Tilanteen niin vaatiessa ovelta ovelle viestimistä.
 - [ ] Valvonta  
   - [ ] Suoritetaan turvallisuuskävely asukkaiden kanssa syystalkoiden yhteydessä  
   - [ ] Tarkistetaan palokuormat syystalkoiden yhteydessä  
-- [ ] Opasteet, ohjeet ja saavutettavuus  
-  - [ ] Parannetaan opasteita kerroksittain
-  - [x] tarkistetaan ulko-opasteiden toimivuus  
+- [x] Opasteet, ohjeet ja saavutettavuus  
+  - [x] Parannetaan opasteita kerroksittain
+  - [x] Tarkistetaan ulko-opasteiden toimivuus  
 - [x] Palovaroittimet siirtyvät yhtiön vastuulle 1.1.2026 lähtien   
 - [x] Suoritetaan leikkipaikan turvatarkastus  
 - [x] Paritalojen tikkaisiin asennetaan lukollinen nousueste
 
-Suunnitelma vuodelle 2026
+## Suunnitelma vuodelle 2026
 
 - [x] Joditabletit vanhenevat maaliskuussa 2026  
 - [ ] Lukitusjärjestelmän uusinnan yhteydessä tarkistetaan huoltotilojen lukituksen toimivuus
 - Syystalkoot
   - [ ] Tarkistetaan yhteisten tilojen palovaroittimien toiminta  
   - [ ] Tarkistetaan kellarien ja varastojen palokuorma  
-  - [ ] Suoritetaan leikkipaikan turvatarkastus
+- [ ] Suoritetaan leikkipaikan turvatarkastus
 
-Suunnitelma vuodelle 2027
+## Suunnitelma vuodelle 2027
 
 - Syystalkoot
   - [ ] Suoritetaan turvallisuuskävely asukkaiden kanssa esimerkiksi talkoiden yhteydessä  
@@ -286,19 +286,30 @@ Suunnitelma vuodelle 2027
   - [ ] Tarkistetaan kellarien ja varastojen palokuorma  
 - [ ] Suoritetaan leikkipaikan turvatarkastus
 
-Suunnitelma vuodelle 2029
+## Suunnitelma vuodelle 2028
+
+- Syystalkoot
+  - [ ] Tarkistetaan yhteisten tilojen palovaroittimien toiminta  
+  - [ ] Tarkistetaan kellarien ja varastojen palokuorma  
+- [ ] Suoritetaan leikkipaikan turvatarkastus
+
+## Suunnitelma vuodelle 2029
 
 - [ ] Joditablettien uusinta
+- Syystalkoot
+  - [ ] Tarkistetaan yhteisten tilojen palovaroittimien toiminta  
+  - [ ] Tarkistetaan kellarien ja varastojen palokuorma  
+- [ ] Suoritetaan leikkipaikan turvatarkastus
 
-Suunnitelma vuodelle 2033
+## Suunnitelma vuodelle 2033
 
 - [ ] Tinakartanossa sijaitsevan väestönsuojan tiiveyskoe ja tarkastus
 
-Suunnitelmat vuodelle 2035
+## Suunnitelmat vuodelle 2035
 
 - [ ] Palovaroittimien vaihtaminen
 
-Pidemmän aikavälin suunnitelmat
+## Mahdollisuuksia tulevaisuudessa.
 
 * Parannetaan appukäytävien savutuuletusta kattoikkunoiden hätäavaamisen avulla; tämä on otettu huomioon ulkovaipan korjauksessa 2025.   
 * Lukitusjärjestelmän uudistuksen yhteydessä huomioidaan murtosuojauksen näkökulmat mahdollisimman hyvin.  
