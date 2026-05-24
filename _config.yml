@@ -9,13 +9,6 @@ baseurl: ""
 
 permalink: /:title/
 
-# HSY service identifiers used by the scraper. Override in the workflow if needed.
-hsy:
-  service_number: "BB11-012731-0"
-  postal_code: "00410"
-  customer_id: "72603608934"
-  source_url: "https://raportit.hsy.fi/report/#/fi/serviceDescription/BB11-012731-0/00410/72603608934////"
-
 # Everything except index.md lives in _content/. Subfolders inside _content/
 # automatically become dropdown menus in the top nav (see _includes/nav.html).
 # `permalink: /:path/` strips the "_content/" prefix from URLs.

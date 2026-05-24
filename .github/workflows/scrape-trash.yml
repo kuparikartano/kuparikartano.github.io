@@ -4,21 +4,8 @@ on:
   schedule:
     # Midnight Helsinki time. GitHub cron is UTC and doesn't know DST, so
     # 22:00 UTC = 00:00 EET (winter) / 01:00 EEST (summer). Close enough.
-    - cron: "0 22 30 * *"
+    - cron: "0 22 * * *" # daily at midnight Helsinki time
   workflow_dispatch:
-    inputs:
-      service:
-        description: "HSY service number"
-        required: false
-        default: "BB11-012731-0"
-      postal:
-        description: "Postal code"
-        required: false
-        default: "00410"
-      customer:
-        description: "Customer ID"
-        required: false
-        default: "72603608934"
 
 permissions:
   contents: write   # commit updated data file back to the repo
@@ -48,9 +35,9 @@ jobs:
 
       - name: Run scraper
         env:
-          HSY_SERVICE:  ${{ github.event.inputs.service }}
-          HSY_POSTAL:   ${{ github.event.inputs.postal }}
-          HSY_CUSTOMER: ${{ github.event.inputs.customer }}
+          HSY_SERVICE:  "BB11-012731-0"
+          HSY_POSTAL:   "00410"
+          HSY_CUSTOMER: "72603608934"
         run: python scripts/scrape_trash.py
 
       - name: Commit updated data if it changed
