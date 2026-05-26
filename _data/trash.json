@@ -1,35 +1,9 @@
 {
-  "updated_at": "2026-05-25T23:13:36+00:00",
-  "updated_at_human": "26.5.2026 klo 02:13",
+  "updated_at": "2026-05-26T23:16:06+00:00",
+  "updated_at_human": "27.5.2026 klo 02:16",
   "source_url": "https://raportit.hsy.fi/report/#/fi/serviceDescription/BB11-012731-0/00410/72603608934////",
   "collection_address": "Parivaljakonkuja 4, 00410",
   "containers": [
-    {
-      "waste_type": "Biojäte",
-      "container_size": "240 l vuoraussäkki",
-      "container_count": "1",
-      "container_type": "säkki",
-      "container_owner": "-",
-      "collection_interval": "1 krt/viikko ti",
-      "next_collection_date": "2026-05-26",
-      "next_collection_date_human": "ti 26.5.2026",
-      "next_collection_date_short": "26.05.26",
-      "days_until": 1,
-      "is_next": true
-    },
-    {
-      "waste_type": "Biojäte",
-      "container_size": "240 l",
-      "container_count": "1",
-      "container_type": "astia",
-      "container_owner": "Vuokra",
-      "collection_interval": "1 krt/viikko ti",
-      "next_collection_date": "2026-05-26",
-      "next_collection_date_human": "ti 26.5.2026",
-      "next_collection_date_short": "26.05.26",
-      "days_until": 1,
-      "is_next": false
-    },
     {
       "waste_type": "Kartonkipakkaukset",
       "container_size": "660 l",
@@ -40,7 +14,7 @@
       "next_collection_date": "2026-05-28",
       "next_collection_date_human": "to 28.5.2026",
       "next_collection_date_short": "28.05.26",
-      "days_until": 3,
+      "days_until": 2,
       "is_next": false
     },
     {
@@ -53,8 +27,8 @@
       "next_collection_date": "2026-05-28",
       "next_collection_date_human": "to 28.5.2026",
       "next_collection_date_short": "28.05.26",
-      "days_until": 3,
-      "is_next": false
+      "days_until": 2,
+      "is_next": true
     },
     {
       "waste_type": "Muovipakkaukset",
@@ -66,7 +40,33 @@
       "next_collection_date": "2026-05-29",
       "next_collection_date_human": "pe 29.5.2026",
       "next_collection_date_short": "29.05.26",
-      "days_until": 4,
+      "days_until": 3,
+      "is_next": false
+    },
+    {
+      "waste_type": "Biojäte",
+      "container_size": "240 l vuoraussäkki",
+      "container_count": "1",
+      "container_type": "säkki",
+      "container_owner": "-",
+      "collection_interval": "1 krt/viikko ti",
+      "next_collection_date": "2026-06-02",
+      "next_collection_date_human": "ti 2.6.2026",
+      "next_collection_date_short": "02.06.26",
+      "days_until": 7,
+      "is_next": false
+    },
+    {
+      "waste_type": "Biojäte",
+      "container_size": "240 l",
+      "container_count": "1",
+      "container_type": "astia",
+      "container_owner": "Vuokra",
+      "collection_interval": "1 krt/viikko ti",
+      "next_collection_date": "2026-06-02",
+      "next_collection_date_human": "ti 2.6.2026",
+      "next_collection_date_short": "02.06.26",
+      "days_until": 7,
       "is_next": false
     },
     {
@@ -79,7 +79,7 @@
       "next_collection_date": "2026-06-09",
       "next_collection_date_human": "ti 9.6.2026",
       "next_collection_date_short": "09.06.26",
-      "days_until": 15,
+      "days_until": 14,
       "is_next": false
     },
     {
@@ -92,21 +92,21 @@
       "next_collection_date": "2026-07-07",
       "next_collection_date_human": "ti 7.7.2026",
       "next_collection_date_short": "07.07.26",
-      "days_until": 43,
+      "days_until": 42,
       "is_next": false
     }
   ],
   "next": {
-    "waste_type": "Biojäte",
-    "container_size": "240 l vuoraussäkki",
-    "container_count": "1",
-    "container_type": "säkki",
-    "container_owner": "-",
-    "collection_interval": "1 krt/viikko ti",
-    "next_collection_date": "2026-05-26",
-    "next_collection_date_human": "ti 26.5.2026",
-    "next_collection_date_short": "26.05.26",
-    "days_until": 1,
+    "waste_type": "Sekajäte",
+    "container_size": "300 l",
+    "container_count": "3",
+    "container_type": "astia",
+    "container_owner": "Vuokra",
+    "collection_interval": "2 krt/viikko ma to",
+    "next_collection_date": "2026-05-28",
+    "next_collection_date_human": "to 28.5.2026",
+    "next_collection_date_short": "28.05.26",
+    "days_until": 2,
     "is_next": true
   }
 }
