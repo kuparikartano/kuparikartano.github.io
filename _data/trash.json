@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-26T23:16:06+00:00",
-  "updated_at_human": "27.5.2026 klo 02:16",
+  "updated_at": "2026-05-27T23:22:29+00:00",
+  "updated_at_human": "28.5.2026 klo 02:22",
   "source_url": "https://raportit.hsy.fi/report/#/fi/serviceDescription/BB11-012731-0/00410/72603608934////",
   "collection_address": "Parivaljakonkuja 4, 00410",
   "containers": [
@@ -14,7 +14,7 @@
       "next_collection_date": "2026-05-28",
       "next_collection_date_human": "to 28.5.2026",
       "next_collection_date_short": "28.05.26",
-      "days_until": 2,
+      "days_until": 1,
       "is_next": false
     },
     {
@@ -27,7 +27,7 @@
       "next_collection_date": "2026-05-28",
       "next_collection_date_human": "to 28.5.2026",
       "next_collection_date_short": "28.05.26",
-      "days_until": 2,
+      "days_until": 1,
       "is_next": true
     },
     {
@@ -40,7 +40,7 @@
       "next_collection_date": "2026-05-29",
       "next_collection_date_human": "pe 29.5.2026",
       "next_collection_date_short": "29.05.26",
-      "days_until": 3,
+      "days_until": 2,
       "is_next": false
     },
     {
@@ -53,7 +53,7 @@
       "next_collection_date": "2026-06-02",
       "next_collection_date_human": "ti 2.6.2026",
       "next_collection_date_short": "02.06.26",
-      "days_until": 7,
+      "days_until": 6,
       "is_next": false
     },
     {
@@ -66,7 +66,7 @@
       "next_collection_date": "2026-06-02",
       "next_collection_date_human": "ti 2.6.2026",
       "next_collection_date_short": "02.06.26",
-      "days_until": 7,
+      "days_until": 6,
       "is_next": false
     },
     {
@@ -79,7 +79,7 @@
       "next_collection_date": "2026-06-09",
       "next_collection_date_human": "ti 9.6.2026",
       "next_collection_date_short": "09.06.26",
-      "days_until": 14,
+      "days_until": 13,
       "is_next": false
     },
     {
@@ -92,7 +92,7 @@
       "next_collection_date": "2026-07-07",
       "next_collection_date_human": "ti 7.7.2026",
       "next_collection_date_short": "07.07.26",
-      "days_until": 42,
+      "days_until": 41,
       "is_next": false
     }
   ],
@@ -106,7 +106,7 @@
     "next_collection_date": "2026-05-28",
     "next_collection_date_human": "to 28.5.2026",
     "next_collection_date_short": "28.05.26",
-    "days_until": 2,
+    "days_until": 1,
     "is_next": true
   }
 }
