@@ -34,9 +34,9 @@ jobs:
 
       - name: Run scraper
         env:
-          HSY_SERVICE:  "BB11-012731-0"
-          HSY_POSTAL:   "00410"
-          HSY_CUSTOMER: "72603608934"
+          HSY_SERVICE:  ${{ vars.HSY_SERVICE }}
+          HSY_POSTAL:   ${{ vars.HSY_POSTAL }}
+          HSY_CUSTOMER: ${{ vars.HSY_CUSTOMER }}
         run: python scripts/scrape_trash.py
 
       - name: Upload trash data as artifact
