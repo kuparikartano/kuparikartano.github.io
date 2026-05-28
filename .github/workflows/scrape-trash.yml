@@ -7,8 +7,7 @@ on:
     - cron: "0 22 * * *" # daily at midnight Helsinki time
   workflow_dispatch:
 
-permissions:
-  contents: write   # commit updated data file back to the repo
+permissions: {}   # no repo writes needed — data is published via artifact
 
 concurrency:
   group: scrape-trash
@@ -40,14 +39,8 @@ jobs:
           HSY_CUSTOMER: "72603608934"
         run: python scripts/scrape_trash.py
 
-      - name: Commit updated data if it changed
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [[ -n "$(git status --porcelain _data/trash.json)" ]]; then
-            git add _data/trash.json
-            git commit -m "chore(data): update trash pickup dates"
-            git push
-          else
-            echo "No changes in _data/trash.json — nothing to commit."
-          fi
+      - name: Upload trash data as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: trash-data
+          path: _data/trash.json

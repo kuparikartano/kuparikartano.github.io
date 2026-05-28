@@ -6,6 +6,9 @@ vendor/
 .bundle/
 Gemfile.lock
 
+# Scraped data — generated at deploy time, never committed
+_data/trash.json
+
 # Python / scraper
 __pycache__/
 *.pyc
