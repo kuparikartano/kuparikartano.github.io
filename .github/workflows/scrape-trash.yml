@@ -44,3 +44,4 @@ jobs:
         with:
           name: trash-data
           path: _data/trash.json
+          overwrite: true
