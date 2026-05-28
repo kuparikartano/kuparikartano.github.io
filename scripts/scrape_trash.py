@@ -108,7 +108,7 @@ def main():
     )
     spa_url = (
         "https://raportit.hsy.fi/report/#/fi/serviceDescription/"
-        f"{args.service}/{args.postal}/{args.customer}////"
+        f"{args.service}/{args.postal}/{args.customer}/"
     )
 
     print(f"GET {api_url}")
@@ -136,8 +136,8 @@ def main():
             continue
         seen.add(key)
 
-        # skip "säkki" which means they replace the bag in a container
-        if raw.get("wasteType").strip() != "säkki": 
+        # skip liner-bag entries (säkki lives inside an astia, not a separate collection)
+        if (raw.get("containerType") or "").strip() != "säkki":
             containers.append(to_container_dict(raw))
 
     if not containers:
