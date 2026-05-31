@@ -41,7 +41,7 @@ jobs:
       - name: Download trash data from scraper workflow
         uses: actions/download-artifact@v4
         with:
-          name: trash-data.json
+          name: trash-data
           path: _data/
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
