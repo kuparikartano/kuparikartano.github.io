@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Oma remontti
+permalink: /kunnossapito/muutosilmoitus/
 nav: 1
 ---
 

@@ -9,20 +9,16 @@ baseurl: ""
 
 permalink: /:title/
 
-# Everything except index.md lives in _content/. Subfolders inside _content/
-# automatically become dropdown menus in the top nav (see _includes/nav.html).
-# `permalink: /:path/` strips the "_content/" prefix from URLs.
-collections:
-  content:
-    output: true
-    permalink: /:path/
+# Content pages live in content/. Each file carries an explicit permalink
+# in its front matter so URLs stay the same as before. Subfolders inside
+# content/ automatically become dropdown menus in the top nav
+# (see _includes/nav.html).
 
 # Jekyll build settings
 markdown: kramdown
 highlighter: rouge
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-toc
 

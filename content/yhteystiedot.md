@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Yhteystiedot
+permalink: /yhteystiedot/
 ---
 
 # Huolto - Taloix

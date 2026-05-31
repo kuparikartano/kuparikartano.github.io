@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Oman pihan hoito
+permalink: /kunnossapito/piha/
 ---
 
 Osaan asunnoista kuuluu piha, jonka kunnossapidon vastuu on osakkaalla.

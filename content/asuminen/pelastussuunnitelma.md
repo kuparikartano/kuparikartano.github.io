@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Pelastussuunnitelma
+permalink: /asuminen/pelastussuunnitelma/
 toc: true
 ---
 

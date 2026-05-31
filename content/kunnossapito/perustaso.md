@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Perustaso
+permalink: /kunnossapito/perustaso/
 toc: true
 ---
 

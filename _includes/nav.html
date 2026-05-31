@@ -1,40 +1,12 @@
-{%- comment -%}
-  Auto-generated top nav (uses Bootstrap 5 navbar + dropdown components).
-
-  Layout convention (everything except index.md lives under _content/):
-
-    index.md                       → home page at "/"
-    _content/<file>.md             → top-level link in the nav
-    _content/<folder>/<file>.md    → "<Folder>" dropdown,
-                                       <file>'s title becomes the dropdown item
-
-  Page front-matter:
-    title         (required — used as the menu / dropdown-item label)
-    nav_order     (optional integer — lower goes first; otherwise alphabetical by title)
-    nav_exclude   (set to true to hide a page from the nav)
-
-  Dropdown labels are taken from the folder name with the first letter
-  capitalized. Drop a new .md file into the tree and it appears in the nav
-  on the next build — no edits to this template needed.
-
-  Markup uses Bootstrap's dropdown component (.dropdown / .dropdown-toggle
-  / .dropdown-menu / .dropdown-item with data-bs-toggle="dropdown") for
-  the folder menus. The outer layout (.site-nav .menu) is kept as plain
-  flex CSS — adding Bootstrap's .navbar / .navbar-expand wrapper made the
-  dropdown <li>s disappear in our header (likely a navbar flex-layout
-  interaction with the surrounding .wrap flex container), so we drop the
-  navbar shell and use Bootstrap only for the dropdown behaviour. Colors
-  and sizes are in assets/style.css so the visual look is unchanged.
-{%- endcomment -%}
-
-{%- assign nav_docs = site.content
+{%- assign nav_docs = site.pages
       | where_exp: "d", "d.title"
-      | where_exp: "d", "d.nav_exclude != true" -%}
+      | where_exp: "d", "d.nav_exclude != true"
+      | where_exp: "d", "d.path contains 'content/'" -%}
 
-{%- comment -%} ============= Top-level files in _content/ ============= {%- endcomment -%}
+{%- comment -%} ============= Top-level files in content/ ============= {%- endcomment -%}
 {%- assign top_docs = "" | split: "" -%}
 {%- for d in nav_docs -%}
-  {%- assign rel = d.relative_path | remove_first: "_content/" -%}
+  {%- assign rel = d.path | remove_first: "content/" -%}
   {%- unless rel contains "/" -%}
     {%- assign top_docs = top_docs | push: d -%}
   {%- endunless -%}
@@ -46,7 +18,7 @@
 {%- comment -%} ============= Discover unique subfolders ============= {%- endcomment -%}
 {%- assign folders_raw = "" | split: "" -%}
 {%- for d in nav_docs -%}
-  {%- assign rel = d.relative_path | remove_first: "_content/" -%}
+  {%- assign rel = d.path | remove_first: "content/" -%}
   {%- if rel contains "/" -%}
     {%- assign folder = rel | split: "/" | first -%}
     {%- assign folders_raw = folders_raw | push: folder -%}
@@ -65,7 +37,7 @@
       {%- comment %} Collect the docs in this folder {%- endcomment -%}
       {%- assign items = "" | split: "" -%}
       {%- for d in nav_docs -%}
-        {%- assign rel = d.relative_path | remove_first: "_content/" -%}
+        {%- assign rel = d.path | remove_first: "content/" -%}
         {%- if rel contains "/" -%}
           {%- assign d_folder = rel | split: "/" | first -%}
           {%- if d_folder == folder -%}
