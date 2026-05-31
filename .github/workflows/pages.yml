@@ -43,7 +43,9 @@ jobs:
         with:
           name: trash-data
           path: _data/
-
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+    
       - name: Configure GitHub Pages
         id: pages
         uses: actions/configure-pages@v5
