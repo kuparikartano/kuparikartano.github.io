@@ -1,0 +1,27 @@
+hallitus:
+  email: kuparikartano@gmail.com
+  jasenet:
+    - nimi: Matti Aakko
+    - nimi: Petri Härmä
+    - nimi: Matti Nelimarkka
+      rooli: puheenjohtaja
+    - nimi: Sinikka Haanpää
+    - nimi: Peter Zukale
+
+huolto:
+  nimi: Taloix Oy
+  vikailmoitus_url: https://taloix.fi/vikailmoitukset/
+  paivystys: "0400 450640"
+
+isannointi:
+  nimi: Emännöintitoimisto Aamu
+  yhteyshenkilö: Susanna Kalikko
+  tilaa_url: https://aamu.io/tilaa-ilmoita/
+  remontti_url: https://aamu.io/ilmoita-remontista/
+  puhelin: "030 410 8615"
+  isannointi_puhelin: "09 615 07 333"
+  email: palvelumestari@aamu.io
+
+hissi:
+  nimi: Suomen Hissiurakointi
+  paivystys: "0800 555 122"

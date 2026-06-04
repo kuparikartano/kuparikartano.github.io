@@ -39,11 +39,7 @@ Firdonkatu 2 T 63
 Hallitus valitaan vuosittain taloyhtiön kevätkokouksessa.
 Hallituksessa 2025 ovat
 
-* Matti Aakko  
-* Petri Härmä  
-* Matti Nelimarkka (pj)  
-* Christina Weiner  
-* Peter Zukale
+{% include contacts-hallitus.html %}
 
 ## Turvallisuushenkilöstö
 
@@ -54,19 +50,15 @@ Puh. 050 52 75 920
 
 ## Isännöinti
 
-Susanna Kalikko  
-Emännöintitoimisto Aamu  
-09 615 07 333
+{% include contacts-isannointi.html style="pelastus" %}
 
 ## Kiinteistöhuolto
 
-Taloix Oy  
-Päivystys 0400 450640
+{% include contacts-huolto.html style="pelastus" %}
 
 ## Hissin huolto
 
-Suomen Hissiurakointi  
-Päivystys 0800 555 122
+{% include contacts-hissi.html %}
 
 # Pelastussuunnitelman tiedot ja päivitys
 
@@ -160,7 +152,7 @@ Jokainen palovaroitin toimii erillisenä laitteena.
 
 ### Hissi
 
-> * Hissin huollon päivystysnumero 0800 555 122.
+> * Hissin huollon päivystysnumero {{ site.data.contacts.hissi.paivystys }}.
 
 | Riskit | Varautumistoimet |
 | :---- | :---- |
@@ -224,7 +216,7 @@ Joditabletteja ei saa nauttia ennen viranomaisten käskyä.
 
 * Asunnoista on hyvä löytyä käteistä rahaa, juomavettä, paristokäyttöisiä taskulamppuja sekä paristokäyttöinen radiolla.  
 * Jos sähkökatkosta on ennakkoon tietoa, turvallisuusvastaava tai hallituksen jäsen vie hissiin ilmoituksen käyttökiellosta sähkökatkon ajaksi.  
-* Jos hississä ihminen sähkökatkon aikana, kannattaa odottaa sähköjen palaamista. Jos tämä ei ole mahdollista, soita hissin huoltoon 0800 555 122 tai hengenvaarallisen tilanteessa 112\. Hissin hälytyspainike toimii sähkökatkon aikana.
+* Jos hississä ihminen sähkökatkon aikana, kannattaa odottaa sähköjen palaamista. Jos tämä ei ole mahdollista, soita hissin huoltoon {{ site.data.contacts.hissi.paivystys }} tai hengenvaarallisen tilanteessa 112\. Hissin hälytyspainike toimii sähkökatkon aikana.
 
 ## Väestönsuoja
 

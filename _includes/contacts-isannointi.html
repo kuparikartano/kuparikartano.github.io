@@ -1,0 +1,12 @@
+{%- assign c = site.data.contacts.isannointi -%}
+{%- if include.style == "pelastus" -%}
+{{ c.yhteyshenkilö }}<br>
+{{ c.nimi }}<br>
+{{ c.isannointi_puhelin }}
+{%- else -%}
+<ul>
+  <li><a href="{{ c.tilaa_url }}">tilaa ja ilmoita</a></li>
+  <li>puhelin: {{ c.puhelin }}</li>
+  <li>sähköposti: <a href="mailto:{{ c.email }}">{{ c.email }}</a></li>
+</ul>
+{%- endif -%}

@@ -1,0 +1,13 @@
+<div>
+{%- assign h = site.data.contacts.hallitus -%}
+{%- assign jasenet_sorted = h.jasenet | sort: "nimi" -%}
+<ul>
+{%- for j in jasenet_sorted -%}
+  <li>{{ j.nimi }}{% if j.rooli %} ({{ j.rooli }}){% endif %}</li>
+{%- endfor -%}
+</ul>
+
+{%- if include.show_email -%}
+  <p>sähköposti: <a href="mailto:{{ h.email }}">{{ h.email }}</a></p>
+{%- endif -%}
+</div>

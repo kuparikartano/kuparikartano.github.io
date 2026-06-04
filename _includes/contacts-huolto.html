@@ -1,0 +1,10 @@
+{%- assign c = site.data.contacts.huolto -%}
+{%- if include.style == "pelastus" -%}
+{{ c.nimi }}<br>
+Päivystys {{ c.paivystys }}
+{%- else -%}
+<ul>
+  <li><a href="{{ c.vikailmoitus_url }}">vikailmoitus</a></li>
+  <li>puhelin: {{ c.paivystys }}, 24 h</li>
+</ul>
+{%- endif -%}
