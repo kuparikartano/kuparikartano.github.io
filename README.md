@@ -119,8 +119,13 @@ triple straight from the public report URL.
 
 ## Customising the site
 
-- **Pages**: add a new `.md` file in the repo root with a front-matter
-  block. Add a link to it in `_includes/nav.html`.
+- **Pages**: add a new `.md` file under `content/` (or `content/<folder>/`
+  for a dropdown submenu) with a front-matter block. `_includes/nav.html`
+  picks it up automatically.
+- **External links**: to make a nav or submenu entry point off-site instead
+  of to the page itself, add `external_url: https://example.com` to that
+  page's front matter (alongside `title`). It opens in a new tab. Works
+  for both top-level items and folder-based submenu items.
 - **Theme**: edit `assets/style.css` and `_layouts/default.html`.
 - **Schedule**: change the `cron:` line in `.github/workflows/scrape-trash.yml`.
 

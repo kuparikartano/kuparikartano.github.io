@@ -30,7 +30,11 @@
   <ul class="menu">
 
     {%- for d in top_sorted -%}
-      <li class="nav-item"><a class="nav-link" href="{{ d.url | relative_url }}">{{ d.title }}</a></li>
+      {%- if d.external_url -%}
+        <li class="nav-item"><a class="nav-link" href="{{ d.external_url }}" target="_blank" rel="noopener noreferrer">{{ d.title }}</a></li>
+      {%- else -%}
+        <li class="nav-item"><a class="nav-link" href="{{ d.url | relative_url }}">{{ d.title }}</a></li>
+      {%- endif -%}
     {%- endfor -%}
 
     {%- for folder in folders -%}
@@ -53,7 +57,11 @@
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">{{ folder | capitalize }}</a>
         <ul class="dropdown-menu">
           {%- for d in items_sorted -%}
-            <li><a class="dropdown-item" href="{{ d.url | relative_url }}">{{ d.title }}</a></li>
+            {%- if d.external_url -%}
+              <li><a class="dropdown-item" href="{{ d.external_url }}" target="_blank" rel="noopener noreferrer">{{ d.title }}</a></li>
+            {%- else -%}
+              <li><a class="dropdown-item" href="{{ d.url | relative_url }}">{{ d.title }}</a></li>
+            {%- endif -%}
           {%- endfor -%}
         </ul>
       </li>
