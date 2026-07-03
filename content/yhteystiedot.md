@@ -4,14 +4,18 @@ title: Yhteystiedot
 permalink: /yhteystiedot/
 ---
 
-# Huolto - Taloix
+## Huolto
 
 {% include contacts-huolto.html %}
 
-# Isännöinti - Emännöintitoimisto Aamu
+## Hissin huolto
+
+{% include contacts-hissi.html %}
+
+## Isännöinti
 
 {% include contacts-isannointi.html %}
 
-# Hallitus
+## Hallitus
 
 {% include contacts-hallitus.html show_email=true %}
