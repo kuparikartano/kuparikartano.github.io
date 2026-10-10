@@ -5,7 +5,7 @@ permalink: /jate-kerays
 ---
 
 <div class="alert alert-primary" role="alert">
-*Jätelava paikalla talkoiden aikana 24.-25.10.*
+<h4 class="alert-heading">Jätelava paikalla talkoiden aikana 24.-25.10.</h4>
   
 Puutarhajätelavalle saa tuoda lehtiä, risuja ja muuta kasvustoa. Muistathan silputa tarvittaessa.
 Sekajätelavalle voi tuoda sekajätettä, mutta ei vaarallista jätettä tai elektroniikkaromua.  
