@@ -4,6 +4,12 @@ title: Jätteiden keräys
 permalink: /jate-kerays
 ---
 
+<div class="alert alert-primary" role="alert">
+*Jätelava paikalla talkoiden aikana 24.-25.10.*
+  
+Puutarhajätelavalle saa tuoda lehtiä, risuja ja muuta kasvustoa. Muistathan silputa tarvittaessa.
+Sekajätelavalle voi tuoda sekajätettä, mutta ei vaarallista jätettä tai elektroniikkaromua.  
+</div>
 
 {% assign containers = site.data.trash.containers %}
 {% if containers and containers.size > 0 %}
